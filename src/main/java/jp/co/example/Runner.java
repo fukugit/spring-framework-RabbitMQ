@@ -1,5 +1,6 @@
 package jp.co.example;
 
+import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -7,7 +8,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Runner implements CommandLineRunner {
+public class Runner {
 
   private final RabbitTemplate rabbitTemplate;
   private final Receiver receiver;
@@ -17,9 +18,8 @@ public class Runner implements CommandLineRunner {
       this.rabbitTemplate = rabbitTemplate;
   }
 
-  @Override
-  public void run(String... args) throws Exception {
-      System.out.println("Sending message...");
+  public void save() throws Exception {
+      System.out.println("Sending message..." + Calendar.getInstance().getTime());
       rabbitTemplate.convertAndSend(App.topicExchangeName, "foo.bar.baz", "Hello from RabbitMQ!");
       receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
   }

@@ -52,8 +52,7 @@ public class App
       return new MessageListenerAdapter(receiver, "receiveMessage");
   }
   
-    public static void main( String[] args )
-    {
-        SpringApplication.run(App.class, args);
-    }
+  public static void main( String[] args ) {
+      SpringApplication.run(App.class, args);
+  }
 }

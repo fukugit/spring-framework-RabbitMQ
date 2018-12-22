@@ -1,25 +1,60 @@
 # spring-framework-RabbitMQ
+![](https://img.shields.io/badge/Language-Angular-brightgreen.svg)  
 
-Base project.  
-https://spring.io/guides/gs/spring-boot/  
+This project is the just note to learn Spring Framework with RabbitMQ.  
+<br/>
 
-For RabbitMQ  
-https://spring.io/guides/gs/messaging-rabbitmq/  
+## Description
 
 
-RabbitMQ
+## Demo
+None.  
+<br/>
 
-install
+## Dependency
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-amqp</artifactId>
+</dependency>
+```
+
+## Requirements
+RabbitMQ  
+<br/>
+
+## Usage
+### Install RabbitMQ
+```
 brew install rabbitmq
+```
 
-Start
+### Run&Stop RabbitMQ
+```
 /usr/local/sbin/rabbitmq-server
-
-Stop
+```
+```
 /usr/local/sbin/rabbitmqctl stop
+```
 
-Admin application
-http://localhost:15672/
+### Access RabbitMQ Web application
+http://localhost:15672/  
+ID/PW is guest  
+<br/>
 
-user:guest
-password:guest
+## References
+https://spring.io/guides/gs/spring-boot/  
+https://spring.io/guides/gs/messaging-rabbitmq/  
+<br/>
+
+## Licence
+MIT
+<br/>
+
+## Authors
+[fukugit](https://github.com/fukugit)
+<br/>
+
+## Conclusion
+
+

@@ -41,6 +41,7 @@ brew install rabbitmq
 ```
 /usr/local/sbin/rabbitmqctl stop
 ```
+<br/>
 
 ### Access RabbitMQ Web application
 http://localhost:15672/  

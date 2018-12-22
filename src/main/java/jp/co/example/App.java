@@ -48,7 +48,7 @@ public class App
   }
 
   @Bean
-  MessageListenerAdapter listenerAdapter(Receiver receiver) {
+  MessageListenerAdapter listenerAdapter(Consumer receiver) {
       return new MessageListenerAdapter(receiver, "receiveMessage");
   }
   

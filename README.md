@@ -10,6 +10,7 @@ This application has 2 feature, one is a sending message to RabbitMQ, second is 
 [Consumer.java](/src/main/java/jp/co/example/Consumer.java) is a receiving message class, which generates a log after 5 seconds when receiving message.  
 
 Although the receiving class should take 5 second to finish process, the sending class is able to finish soon without waiting 5 seconds. That means, the process is whose between the receiving and sending can be asynchronization.  
+<br/>
 
 ## Demo
 None.  
